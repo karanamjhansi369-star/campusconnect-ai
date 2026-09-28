@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Calendar, Clock, MapPin, Users, Sparkles, Check, Share2 } from 'lucide-react';
 import { CampusEvent } from '../types';
+import { SafeImage } from './SafeImage';
 
 interface EventDetailModalProps {
   event: CampusEvent | null;
@@ -25,33 +26,31 @@ export const EventDetailModal: React.FC<EventDetailModalProps> = ({ event, onClo
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Image */}
-        <div className="relative h-56 sm:h-64 w-full bg-slate-800">
-          <img
+        <div className="relative h-56 sm:h-64 w-full bg-slate-800 overflow-hidden">
+          <SafeImage
             src={event.image}
             alt={event.title}
-            referrerPolicy="no-referrer"
+            category={event.category}
+            fallbackIcon={<Sparkles className="w-8 h-8 text-blue-400" />}
             className="w-full h-full object-cover object-center"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = 'none';
-            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent pointer-events-none" />
 
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-slate-950/70 hover:bg-slate-950 text-slate-300 hover:text-white border border-slate-700/60 transition-colors"
+            className="absolute top-4 right-4 p-2 rounded-full bg-slate-950/70 hover:bg-slate-950 text-slate-300 hover:text-white border border-slate-700/60 transition-colors z-20 cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Category & Date badge */}
-          <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between">
-            <span className="text-xs font-mono text-blue-300 bg-blue-950/90 border border-blue-500/40 px-3 py-1 rounded-lg">
+          <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between pointer-events-none">
+            <span className="text-xs font-mono text-blue-300 bg-blue-950/90 border border-blue-500/40 px-3 py-1 rounded-lg shadow-sm">
               {event.category}
             </span>
-            <span className="text-xs font-mono text-slate-300 bg-slate-950/90 border border-slate-700 px-3 py-1 rounded-lg">
+            <span className="text-xs font-mono text-slate-300 bg-slate-950/90 border border-slate-700 px-3 py-1 rounded-lg shadow-sm">
               {event.displayDate}
             </span>
           </div>

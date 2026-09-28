@@ -26,6 +26,7 @@ export interface StudentResource {
   description: string;
   quickLinks: { label: string; url: string; external?: boolean }[];
   tags: string[];
+  image?: string;
 }
 
 export interface CampusFacility {
@@ -37,6 +38,7 @@ export interface CampusFacility {
   hours: string;
   location: string;
   features: string[];
+  image?: string;
 }
 
 export interface ImportantInfoItem {
@@ -63,6 +65,7 @@ export interface CampusClub {
   lead: string;
   tags: string[];
   upcomingActivity: string;
+  image?: string;
 }
 
 export interface WhyFeature {

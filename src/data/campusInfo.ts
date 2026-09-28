@@ -9,7 +9,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Sprawling smart campus featuring modern amphitheaters, sports complexes, student activity zones, and green walkways.',
     hours: '06:00 AM – 10:30 PM',
     location: 'Central Campus Quadrangle',
-    features: ['Olympic Swimming Complex', 'Open-Air Amphitheater', 'Multi-Sport Indoor Arena', 'Student Recreation Lounge']
+    features: ['Olympic Swimming Complex', 'Open-Air Amphitheater', 'Multi-Sport Indoor Arena', 'Student Recreation Lounge'],
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-library',
@@ -19,7 +20,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Four-level smart library housing over 150,000 cataloged books, private research cubicles, and 24/7 collaborative learning rooms.',
     hours: '08:00 AM – 12:00 Midnight (24/7 during Finals)',
     location: 'West Knowledge Wing, Block B',
-    features: ['24/7 Silent Study Floors', 'High-Speed Wireless Charging Pods', 'Automated RFID Self-Checkout', 'Microfilm & Rare Archives']
+    features: ['24/7 Silent Study Floors', 'High-Speed Wireless Charging Pods', 'Automated RFID Self-Checkout', 'Microfilm & Rare Archives'],
+    image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-computer-labs',
@@ -29,7 +31,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Twelve dedicated computing suites equipped with NVIDIA RTX A6000 workstations, high-speed fiber backbones, and dual monitors.',
     hours: '07:30 AM – 10:00 PM',
     location: 'Turing Computing Center, 3rd Floor',
-    features: ['Dedicated AI & Deep Learning Cluster', 'Ubuntu Linux & macOS Workstations', 'Dual 4K HDR Displays', 'Gigabit Fiber Ports']
+    features: ['Dedicated AI & Deep Learning Cluster', 'Ubuntu Linux & macOS Workstations', 'Dual 4K HDR Displays', 'Gigabit Fiber Ports'],
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-laboratories',
@@ -39,7 +42,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Cutting-edge instrumentation suites for Embedded Systems, IoT sensor arrays, Nanotechnology, and rapid 3D prototyping.',
     hours: '08:30 AM – 08:00 PM',
     location: 'Edison Science & Research Complex',
-    features: ['Makerspace 3D Printing & CNC Lab', 'RF & Microwave Anechoic Chamber', 'Cleanroom Nano-Fab Facility', 'Automated Chemical Analyzers']
+    features: ['Makerspace 3D Printing & CNC Lab', 'RF & Microwave Anechoic Chamber', 'Cleanroom Nano-Fab Facility', 'Automated Chemical Analyzers'],
+    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-cafeteria',
@@ -49,7 +53,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Multiple dining halls, artisan coffee roasters, and organic juice bars offering diverse, healthy nutrition at subsidized student rates.',
     hours: '07:30 AM – 10:30 PM',
     location: 'Student Union Pavilion & East Commons',
-    features: ['Multi-Cuisine Daily Hot Buffet', 'Specialty Espresso & Artisan Bakery', 'Vegan, Halal & Allergen-Safe Zones', 'Pre-Order Mobile Pickup Counter']
+    features: ['Multi-Cuisine Daily Hot Buffet', 'Specialty Espresso & Artisan Bakery', 'Vegan, Halal & Allergen-Safe Zones', 'Pre-Order Mobile Pickup Counter'],
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-support',
@@ -59,7 +64,8 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     description: 'Comprehensive psychological counseling, academic accommodation advocates, international student help, and peer mentoring.',
     hours: '09:00 AM – 06:00 PM (Emergency 24/7)',
     location: 'Student Wellness Pavilion, Suite 104',
-    features: ['Confidential 1-on-1 Counseling', 'Disability & Accessibility Advocates', 'International Scholar Advisory', 'Peer Mental Health Ambassadors']
+    features: ['Confidential 1-on-1 Counseling', 'Disability & Accessibility Advocates', 'International Scholar Advisory', 'Peer Mental Health Ambassadors'],
+    image: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=80'
   }
 ];
 

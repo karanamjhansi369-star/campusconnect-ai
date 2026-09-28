@@ -13,7 +13,8 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Computer Lab 3, CS Department',
     lead: 'Arjun Mehta & Sarah Lin',
     tags: ['Algorithms', 'Open Source', 'Hackathons', 'Systems'],
-    upcomingActivity: 'Autumn Competitive Algorithmic League – Round 3'
+    upcomingActivity: 'Autumn Competitive Algorithmic League – Round 3',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'club-ai-robotics',
@@ -27,7 +28,8 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Robotics Workshop & FabLab',
     lead: 'Maya Patel & Devansh Rao',
     tags: ['Agentic AI', 'Computer Vision', 'ROS2', 'Autonomous Systems'],
-    upcomingActivity: 'Autonomous Campus Quad-Copter Test Flights'
+    upcomingActivity: 'Autonomous Campus Quad-Copter Test Flights',
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'club-eco',
@@ -41,7 +43,8 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Greenhouse & Environmental Center',
     lead: 'Chloe Henderson',
     tags: ['Net-Zero', 'Recycling', 'Biodiversity', 'Renewable Energy'],
-    upcomingActivity: 'Campus Tree Canopy Mapping & Sensor Installation'
+    upcomingActivity: 'Campus Tree Canopy Mapping & Sensor Installation',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'club-cultural',
@@ -55,7 +58,8 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Open-Air Amphitheatre & Rehearsal Studio',
     lead: 'Rohan Kapoor & Zoe Vance',
     tags: ['Theater', 'Music', 'Festivals', 'Performing Arts'],
-    upcomingActivity: 'Inter-College Autumn Acoustic Showcase'
+    upcomingActivity: 'Inter-College Autumn Acoustic Showcase',
+    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'club-entrepreneurship',
@@ -69,7 +73,8 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Startup Incubator, Suite 201',
     lead: 'Vikram Joshi & Aliyah Khan',
     tags: ['Seed Funding', 'Startups', 'Venture Capital', 'Product Pitch'],
-    upcomingActivity: 'Campus Angel Pitch Night & Founder Demo Day'
+    upcomingActivity: 'Campus Angel Pitch Night & Founder Demo Day',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'club-photography',
@@ -83,6 +88,7 @@ export const CAMPUS_CLUBS: CampusClub[] = [
     location: 'Media Studio B, Arts Center',
     lead: 'Lucas Kim',
     tags: ['Documentary', 'Drone Video', 'Portraiture', 'Exhibition'],
-    upcomingActivity: 'Campus Monsoons & Architecture Photo Exhibition'
+    upcomingActivity: 'Campus Monsoons & Architecture Photo Exhibition',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80'
   }
 ];

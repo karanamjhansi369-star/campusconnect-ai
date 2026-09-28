@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { CampusFacility, ImportantInfoItem } from '../types';
 import { CAMPUS_FACILITIES, IMPORTANT_CAMPUS_INFO } from '../data/campusInfo';
+import { SafeImage } from './SafeImage';
 
 interface CampusInfoProps {
   onShowToast: (message: string) => void;
@@ -97,39 +98,62 @@ export const CampusInfo: React.FC<CampusInfoProps> = ({ onShowToast }) => {
             return (
               <div
                 key={fac.id}
-                className="group flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-950/30 hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col justify-between rounded-2xl bg-slate-900/85 border border-slate-800 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-950/30 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-200">
-                      <Icon className="w-6 h-6" />
+                {/* Visual Image Header */}
+                {fac.image && (
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-800">
+                    <SafeImage
+                      src={fac.image}
+                      alt={fac.title}
+                      category={fac.category}
+                      fallbackIcon={<Icon className="w-6 h-6 text-cyan-400" />}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent pointer-events-none" />
+
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[11px] font-medium text-cyan-300 bg-slate-950/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-cyan-500/30 shadow-sm">
+                        {fac.category}
+                      </span>
                     </div>
-                    <span className="text-[11px] font-mono text-slate-400">
-                      {fac.location}
-                    </span>
+
+                    <div className="absolute bottom-2.5 left-3 right-3 flex items-center gap-1.5 text-xs text-slate-300 pointer-events-none">
+                      <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                      <span className="truncate">{fac.location}</span>
+                    </div>
                   </div>
+                )}
 
-                  <h3 className="text-xl font-bold text-white mb-2 font-display group-hover:text-cyan-200 transition-colors">
-                    {fac.title}
-                  </h3>
-
-                  <p className="text-sm text-slate-400 leading-relaxed mb-4">
-                    {fac.description}
-                  </p>
-
-                  <div className="space-y-1.5 pt-3 border-t border-slate-800">
-                    {fac.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/80 shrink-0" />
-                        <span className="truncate">{feat}</span>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-200 shrink-0">
+                        <Icon className="w-5 h-5" />
                       </div>
-                    ))}
-                  </div>
-                </div>
+                      <h3 className="text-lg font-bold text-white font-display group-hover:text-cyan-200 transition-colors">
+                        {fac.title}
+                      </h3>
+                    </div>
 
-                <div className="pt-4 mt-5 border-t border-slate-800 flex items-center justify-between text-xs">
-                  <span className="text-slate-400">Hours:</span>
-                  <span className="font-mono text-slate-200 font-medium">{fac.hours}</span>
+                    <p className="text-sm text-slate-400 leading-relaxed mb-4">
+                      {fac.description}
+                    </p>
+
+                    <div className="space-y-1.5 pt-3 border-t border-slate-800">
+                      {fac.features.map((feat, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
+                          <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/80 shrink-0" />
+                          <span className="truncate">{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 mt-5 border-t border-slate-800 flex items-center justify-between text-xs">
+                    <span className="text-slate-400">Hours:</span>
+                    <span className="font-mono text-slate-200 font-medium">{fac.hours}</span>
+                  </div>
                 </div>
               </div>
             );

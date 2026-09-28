@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, ArrowRight, CheckCircle2, Filter, Layers } from 'lucide-react';
+import { Calendar, Clock, MapPin, ArrowRight, CheckCircle2, Filter, Layers, Sparkles } from 'lucide-react';
 import { CampusEvent, EventCategory } from '../types';
 import { CAMPUS_EVENTS } from '../data/events';
+import { SafeImage } from './SafeImage';
 
 interface UpcomingEventsProps {
   onSelectEvent: (event: CampusEvent) => void;
@@ -69,29 +70,26 @@ export const UpcomingEvents: React.FC<UpcomingEventsProps> = ({ onSelectEvent })
             >
               {/* Event Image Banner with Scrim */}
               <div className="relative h-48 w-full overflow-hidden bg-slate-800">
-                <img
+                <SafeImage
                   src={evt.image}
                   alt={evt.title}
-                  referrerPolicy="no-referrer"
+                  category={evt.category}
+                  fallbackIcon={<Sparkles className="w-6 h-6 text-blue-400" />}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
-                  onError={(e) => {
-                    // Fallback to high tech gradient container
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent pointer-events-none" />
 
                 {/* Date & Category Badge Overlay */}
-                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                  <span className="text-[11px] font-mono tracking-tight text-white bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-700/60">
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                  <span className="text-[11px] font-mono tracking-tight text-white bg-slate-950/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-700/60 shadow-sm">
                     {evt.displayDate}
                   </span>
-                  <span className="text-[11px] font-medium text-blue-300 bg-blue-950/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-blue-500/30">
+                  <span className="text-[11px] font-medium text-blue-300 bg-blue-950/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-blue-500/30 shadow-sm">
                     {evt.category}
                   </span>
                 </div>
 
-                <div className="absolute bottom-2.5 left-3 right-3 flex items-center gap-1.5 text-xs text-slate-300">
+                <div className="absolute bottom-2.5 left-3 right-3 flex items-center gap-1.5 text-xs text-slate-300 pointer-events-none">
                   <MapPin className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
                   <span className="truncate">{evt.location}</span>
                 </div>

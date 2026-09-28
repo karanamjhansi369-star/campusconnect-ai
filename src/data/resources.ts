@@ -13,7 +13,8 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'Midterm & Final Exam Schedule', url: '#exam-schedule' },
       { label: 'Academic Regulations & Grading Handbook', url: '#handbook' }
     ],
-    tags: ['Curriculum', 'Exams', 'Syllabus', 'Policies']
+    tags: ['Curriculum', 'Exams', 'Syllabus', 'Policies'],
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'res-career',
@@ -27,7 +28,8 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'AI Resume Review & Template Toolkit', url: '#resume-tools' },
       { label: 'Alumni Mentorship Network Sign-up', url: '#alumni' }
     ],
-    tags: ['Careers', 'Internships', 'Interviews', 'Networking']
+    tags: ['Careers', 'Internships', 'Interviews', 'Networking'],
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'res-coding',
@@ -41,7 +43,8 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'Curated Competitive Coding Roadmap', url: '#dsa-roadmap' },
       { label: 'Campus Open Source Repositories', url: '#open-source' }
     ],
-    tags: ['Development', 'GPU Cluster', 'GitHub', 'DSA']
+    tags: ['Development', 'GPU Cluster', 'GitHub', 'DSA'],
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'res-library',
@@ -55,7 +58,8 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'Off-Campus EZProxy Login Guide', url: '#proxy-guide' },
       { label: 'Research Paper Citation Style Guides', url: '#citation-guide' }
     ],
-    tags: ['IEEE', 'ACM', 'Research Papers', 'Proxy Access']
+    tags: ['IEEE', 'ACM', 'Research Papers', 'Proxy Access'],
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'res-forms',
@@ -69,7 +73,8 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'Campus Hostel & Leave Permission Slip', url: '#hostel-leave' },
       { label: 'Merit Scholarship Renewal Application', url: '#scholarship' }
     ],
-    tags: ['Forms', 'Transcripts', 'Petitions', 'Bonafide']
+    tags: ['Forms', 'Transcripts', 'Petitions', 'Bonafide'],
+    image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'res-learning',
@@ -83,6 +88,7 @@ export const STUDENT_RESOURCES: StudentResource[] = [
       { label: 'Book 1-on-1 Peer Tutoring Session', url: '#peer-tutoring' },
       { label: 'Department Honors Seminar Reading List', url: '#reading-list' }
     ],
-    tags: ['Lecture Videos', 'Tutoring', 'Notes', 'Courseware']
+    tags: ['Lecture Videos', 'Tutoring', 'Notes', 'Courseware'],
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80'
   }
 ];

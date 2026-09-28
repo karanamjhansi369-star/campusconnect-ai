@@ -1,5 +1,6 @@
 import React from 'react';
-import { Calendar, BookOpen, Sparkles, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
+import { Calendar, BookOpen, Sparkles, ArrowRight, ShieldCheck, Zap, Building } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 interface HeroProps {
   onExploreEvents: () => void;
@@ -81,15 +82,18 @@ export const Hero: React.FC<HeroProps> = ({ onExploreEvents, onExploreResources 
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Outer decorative gradient border */}
               <div className="relative p-1.5 rounded-3xl bg-gradient-to-tr from-blue-500/30 via-indigo-500/40 to-purple-500/30 shadow-2xl shadow-indigo-950/60 backdrop-blur-sm">
-                <div className="relative rounded-[22px] overflow-hidden bg-slate-900 border border-slate-800">
-                  <img
-                    src="/src/assets/images/hero_campus_tech_1790606658666.jpg"
+                <div className="relative rounded-[22px] overflow-hidden bg-slate-900 border border-slate-800 h-80 sm:h-96">
+                  <SafeImage
+                    src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
+                    fallbackSrc="/images/hero_campus_tech_1790606658666.jpg"
                     alt="Modern University Campus with students collaborating"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-80 sm:h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                    category="Smart Campus"
+                    fallbackIcon={<Building className="w-8 h-8 text-indigo-400" />}
+                    loading="eager"
+                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   {/* Contrast gradient overlay scrim */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
 
                   {/* Campus Tag Overlay */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/85 backdrop-blur-md border border-slate-700/60 shadow-lg">
