@@ -1,0 +1,6 @@
+{
+  "name": "CampusConnect AI – Smart Campus Assistant",
+  "description": "A modern, unified smart campus portal for college students to discover campus events, academic resources, student clubs, and essential campus information.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
