@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, ArrowRight } from 'lucide-react';
+import { Menu, X, Sparkles, ArrowRight, Bot } from 'lucide-react';
+import { openN8nChat } from './N8nChatWidget';
 
 interface NavbarProps {
   onExploreCampus: () => void;
@@ -107,8 +108,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreCampus }) => {
             })}
           </nav>
 
-          {/* Zone 3: Highlighted Primary Action Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Zone 3: Highlighted Primary Action Buttons */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            <button
+              type="button"
+              onClick={openN8nChat}
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-indigo-300 bg-indigo-950/60 hover:bg-indigo-900/60 border border-indigo-500/30 rounded-lg hover:text-white transition-all cursor-pointer whitespace-nowrap"
+            >
+              <Bot className="w-4 h-4 text-indigo-400" />
+              <span>AI Chat</span>
+            </button>
+
             <button
               onClick={onExploreCampus}
               className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-lg shadow-sm shadow-indigo-600/30 hover:shadow-indigo-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap cursor-pointer"
@@ -155,7 +165,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreCampus }) => {
               </a>
             ))}
           </div>
-          <div className="pt-3 border-t border-slate-800/60">
+          <div className="pt-3 border-t border-slate-800/60 space-y-2">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openN8nChat();
+              }}
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-indigo-300 bg-indigo-950/80 border border-indigo-500/30 rounded-lg hover:text-white transition-colors"
+            >
+              <Bot className="w-4 h-4 text-indigo-400" />
+              <span>Ask Campus AI Assistant</span>
+            </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

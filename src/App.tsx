@@ -14,6 +14,7 @@ import { CampusClubs } from './components/CampusClubs';
 import { WhyCampusConnect } from './components/WhyCampusConnect';
 import { FutureAiPlaceholder } from './components/FutureAiPlaceholder';
 import { Footer } from './components/Footer';
+import { N8nChatWidget } from './components/N8nChatWidget';
 import { EventDetailModal } from './components/EventDetailModal';
 import { ResourceModal } from './components/ResourceModal';
 import { ClubDetailModal } from './components/ClubDetailModal';
@@ -98,6 +99,9 @@ export default function App() {
           showToast(`Application submitted to ${name} coordinators!`);
         }}
       />
+
+      {/* n8n Live Chatbox Integration */}
+      <N8nChatWidget />
 
       <Toast message={toastMessage} onClose={() => setToastMessage(null)} />
     </div>
