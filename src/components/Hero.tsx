@@ -85,7 +85,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreEvents, onExploreResources 
                 <div className="relative rounded-[22px] overflow-hidden bg-slate-900 border border-slate-800 h-80 sm:h-96">
                   <SafeImage
                     src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
-                    fallbackSrc="/images/hero_campus_tech_1790606658666.jpg"
                     alt="Modern University Campus with students collaborating"
                     category="Smart Campus"
                     fallbackIcon={<Building className="w-8 h-8 text-indigo-400" />}

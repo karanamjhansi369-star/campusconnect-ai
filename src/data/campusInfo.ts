@@ -43,7 +43,7 @@ export const CAMPUS_FACILITIES: CampusFacility[] = [
     hours: '08:30 AM – 08:00 PM',
     location: 'Edison Science & Research Complex',
     features: ['Makerspace 3D Printing & CNC Lab', 'RF & Microwave Anechoic Chamber', 'Cleanroom Nano-Fab Facility', 'Automated Chemical Analyzers'],
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'fac-cafeteria',
